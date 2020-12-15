@@ -7,7 +7,6 @@
     myPath: /home/ubuntu/
 
   tasks:
-
 - name: Install Kubectl
   apt:
     update_cache: yes 
