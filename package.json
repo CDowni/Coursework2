@@ -1,0 +1,21 @@
+{
+  "name": "devops_coursework",
+  "version": "1.0.0",
+  "description": "CD Coursework",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CDowni/Coursework2"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "cdowni202@caledonian.ac.uk",
+  "license": "ISC"
+}
