@@ -1,20 +1,8 @@
-- name: Install Kubectl and Minikube 
-  hosts: localhost
-  user: ubuntu
+---
+- hosts: localhost
   become: yes
-  
-  vars:
-    myPath: /home/ubuntu/
-
-  tasks:
-- name: Install Kubectl
-  apt:
-    update_cache: yes 
-    name: kubectl
-    
-- name: Install Minikube
-  apt:
-    update_cache: yes 
-    name: minikube
-
-
+  tasks: 
+  - name: Install Kubectl
+    apt:
+      name:
+      - kubectl
