@@ -2,10 +2,10 @@
   "name": "devops_coursework",
   "version": "1.0.0",
   "description": "CD Coursework",
-  "main": "test.js",
+  "main": "Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test.js"
+    "start": "node Server.js"
   },
   "repository": {
     "type": "git",
