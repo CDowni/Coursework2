@@ -33,7 +33,10 @@ node {
             app.push("latest")
         }
         
-    stage('Sonarqube') {
+    
+    }
+	
+	stage('Sonarqube') {
         environment {
             scannerHome = tool 'SonarQube Scanner'
         }
@@ -45,6 +48,5 @@ node {
                 waitForQualityGate abortPipeline: true
             }
         }
-    }
     }
 }
