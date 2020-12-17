@@ -10,6 +10,7 @@ node {
            else {
                build 'Declarative pipeline'
                echo 'Running on Stage #1'
+               print 'Test Stage #1'
            }
       }
 }
