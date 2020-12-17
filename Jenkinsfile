@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("devops_coursework")
+        app = docker.build("cdowni/devops_coursework")
     }
 
     stage('Test image') {
