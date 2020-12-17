@@ -8,7 +8,7 @@ node {
                echo 'Running on Stage #0'
            }
            else {
-               build 'Declarative pipeline'
+               build 'devops_coursework'
                echo 'Running on Stage #1'
                print 'Test Stage #1'
            }
