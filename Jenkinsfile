@@ -2,7 +2,6 @@ pipeline {
 environment {
 registry = "cdowni/coursework"
 registryCredential = 'dockerhub_id'
-dockerImage = ''
 }
 agent any
   
