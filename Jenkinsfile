@@ -20,7 +20,6 @@ node {
 				withSonarQubeEnv('sonarqube') {
 					sh "${scannerHome}/bin/sonar-scanner"
 				}
-				
 			}
 		}
 		stage('Push image') {
@@ -30,4 +29,4 @@ node {
 			}
 		}
 	
-}
+	}
