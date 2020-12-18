@@ -1,18 +1,19 @@
-node {
-		def app
-
-		stage('Clone repository') {
-			checkout scm
-		}
-		stage('Build image') {
-			app = docker.build("cdowni/devops_coursework")
-		}
-		stage('Test image') {
-			app.inside {
-				sh 'echo "Tests passed"'
-			}
-		}
-		stage('Sonarqube') {
+pipeline {
+environment {
+registry = "cranki208/coursework"
+registryCredential = 'dockerhub_id'
+dockerImage = ''
+}
+agent any
+stages {
+stage('Building image') {
+steps{
+script {
+dockerImage = docker.build registry + ":$BUILD_NUMBER"
+}
+}
+}
+stage('Sonarqube') {
     environment {
         scannerHome = tool 'SonarQubeScanner'
     }
@@ -23,11 +24,21 @@ node {
         
     }
 }
-		stage('Push image') {
-			docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-				app.push("${env.BUILD_NUMBER}")
-				app.push("latest")
-			}
-		}
-	
-	}
+stage('Push image') { 
+steps{
+script {
+    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            dockerImage.push("${env.BUILD_NUMBER}")
+            dockerImage.push("latest")
+}
+}
+}
+}
+
+stage('Cleaning up') {
+steps{
+sh "docker rmi $registry:$BUILD_NUMBER"
+}
+}
+}
+}
