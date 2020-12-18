@@ -36,11 +36,14 @@ node {
     
     }
 	
-	stage('SonarQube analysis') {
+	stage('Sonarqube') {
+        environment {
+            scannerHome = tool 'SonarQube Scanner'
 		steps {
 			withSonarQubeEnv('SonarQube') {
 				sh "./gradlew sonarqube"
 			}
 		}
-	}
+        } 
+    }
 }
