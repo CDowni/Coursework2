@@ -1,5 +1,5 @@
 # use a node base image
-FROM minikube
+FROM node:7-onbuild
 
 # set a health check
 HEALTHCHECK --interval=5s \
