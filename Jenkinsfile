@@ -1,6 +1,6 @@
 pipeline {
 environment {
-registry = "cranki208/coursework"
+registry = "cdowni/coursework"
 registryCredential = 'dockerhub_id'
 dockerImage = ''
 }
