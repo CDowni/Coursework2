@@ -29,8 +29,8 @@ node {
 			   -Dsonar.css.node=. \
 			   -Dsonar.host.url=http://100.25.141.56/:9000 \
 			   -Dsonar.login=58a0ea6e2e7fde949595774ba74d4fa6cd023673"
-				   }
-			   }
-		   }
-   }
+				}
+			}
+		}
+    }
 }
