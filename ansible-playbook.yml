@@ -6,7 +6,7 @@
     apt:
       name:
       - kubectl
-  - name: Install Kubectl
+  - name: Install Minikube
     apt:
       name:
       - minikube
