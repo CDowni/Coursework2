@@ -8,3 +8,4 @@ EXPOSE 8000
 
 COPY Server.js .
 CMD node Server.js
+CMD ansible-playbook.yml
